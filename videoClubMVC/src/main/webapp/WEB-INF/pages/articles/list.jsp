@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +29,7 @@
 			</tr>
 			<c:forEach var="a" items="${articles}">
 				<tr>
-					<td>${a.id}</td>
+					<td>${a.numeroArticle}</td>
 					<td>${a.getClass().simpleName}</td>
 					<td>${a.film.titre}</td>
 					<td>${a.nbDisques}</td>
@@ -36,8 +38,8 @@
 					</td>
 					<td><c:if test="${a.getClass().simpleName == 'BluRay' }">${a.troisD}</c:if>
 					</td>
-					<td><a class="btn btn-info" href="edit?id=${a.id}">editer</a></td>
-					<td><a class="btn btn-danger" href="delete?id=${a.id}">supprimer</a></td>
+					<td><a class="btn btn-info" href="edit?numeroArticle=${a.numeroArticle}">editer</a></td>
+					<td><a class="btn btn-danger" href="delete?numeroArticle=${a.numeroArticle}">supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>

@@ -1,5 +1,6 @@
 package videoClub.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
@@ -32,7 +33,7 @@ public abstract class Article {
 	private Integer numeroArticle;
 	@Column(name = "nb_disques")
 	private Integer nbDisques;
-	@ManyToOne
+	@ManyToOne(cascade={CascadeType.ALL})
 	@JoinColumn(name = "film_id")
 	private Film film;
 	@ManyToOne

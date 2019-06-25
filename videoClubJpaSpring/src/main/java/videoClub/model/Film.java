@@ -3,6 +3,7 @@ package videoClub.model;
 import java.util.Date;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -31,7 +32,7 @@ public class Film {
 	@Column(name = "date_sortie")
 	@Temporal(TemporalType.DATE)
 	private Date dateSortie;
-	@OneToMany(mappedBy = "film")
+	@OneToMany(mappedBy = "film", cascade={CascadeType.ALL})
 	private Set<Article> articles;
 	@Version
 	private int version;
