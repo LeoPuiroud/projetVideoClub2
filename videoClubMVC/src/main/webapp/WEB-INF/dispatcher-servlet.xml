@@ -18,7 +18,7 @@
 		conversion-service="conversionService"></mvc:annotation-driven>
 
 	<context:component-scan
-		base-package="formationSpringMvc.controller"></context:component-scan>
+		base-package="controller"></context:component-scan>
 
 
 	<bean id="conversionService"
