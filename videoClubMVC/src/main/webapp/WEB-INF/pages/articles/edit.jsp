@@ -23,6 +23,7 @@
 			</c:when>
 		</c:choose>
 		<form:form method="get" action="${action}" modelAttribute="article">
+			<form:hidden path="version" />
 			<div class="form-group">
 				<form:label path="numeroArticle">Id :</form:label>
 				<form:input path="numeroArticle" readonly="true"
