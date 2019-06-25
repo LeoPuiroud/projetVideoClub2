@@ -16,7 +16,7 @@
 
 	<div class="container">
 		<a href="addDvd" class="btn btn-link">Ajouter un DVD</a> <a
-			href="addBluRay" class="btn btn-link">Ajouter un BluRay</a>
+			href="addBluray" class="btn btn-link">Ajouter un BluRay</a>
 		<table class="table">
 			<tr>
 				<th>Id</th>
