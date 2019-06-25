@@ -6,17 +6,17 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue("dvd")
 public class Dvd extends Article {
-	private Boolean bonus;
+	private boolean bonus;
 
 	public Dvd() {
 
 	}
 
-	public Boolean getBonus() {
+	public boolean getBonus() {
 		return bonus;
 	}
 
-	public void setBonus(Boolean bonus) {
+	public void setBonus(boolean bonus) {
 		this.bonus = bonus;
 	}
 

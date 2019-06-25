@@ -14,18 +14,22 @@ import videoClub.model.Article;
 import videoClub.model.BluRay;
 import videoClub.model.Dvd;
 import videoClub.repository.ArticleRepository;
+import videoClub.repository.FilmRepository;
 
 
 @Controller
-@RequestMapping("/article")
+@RequestMapping("/articles")
 public class ArticleController {
 
 	@Autowired
 	private ArticleRepository articleRepository;
+	
+	@Autowired
+	private FilmRepository filmRepository;
 
 	@GetMapping("/list")
 	public ModelAndView list() {
-		return new ModelAndView("article/list", "articles", articleRepository.findAll());
+		return new ModelAndView("articles/list", "articles", articleRepository.findAll());
 	}
 
 	@GetMapping("/addDvd")
@@ -33,13 +37,15 @@ public class ArticleController {
 		return goEdit(new Dvd());
 	}
 
-	@GetMapping("/addBlueray")
+	@GetMapping("/addBluray")
 	public ModelAndView addBlueray() {
 		return goEdit(new BluRay());
 	}
 
 	private ModelAndView goEdit(Article article) {
-		return new ModelAndView("article/edit", "article", article);
+		ModelAndView mav = new ModelAndView("articles/edit", "article", article);
+		mav.addObject("films", filmRepository.findAll());
+		return mav;
 	}
 
 	@GetMapping("/saveDvd")
@@ -54,26 +60,26 @@ public class ArticleController {
 
 	private ModelAndView save(Article article) {
 		articleRepository.save(article);
-		return new ModelAndView("redirect:/article/list");
+		return new ModelAndView("redirect:/articles/list");
 	}
 
 	@GetMapping("/edit")
-	public ModelAndView edit(@RequestParam(name = "id") Integer id) {
+	public ModelAndView edit(@RequestParam(name = "numeroArticle") Integer id) {
 		Optional<Article> opt = articleRepository.findById(id);
 		if (opt.isPresent()) {
 			return goEdit(opt.get());
 		} else {
-			return new ModelAndView("redirect:/article/list");
+			return new ModelAndView("redirect:/articles/list");
 		}
 	}
 
 	@GetMapping("/delete")
-	public String delete(@RequestParam(name = "id") int id) {
+	public String delete(@RequestParam(name = "numeroArticle") int id) {
 		Optional<Article> opt = articleRepository.findById(id);
 		if (opt.isPresent()) {
 			articleRepository.deleteById(id);
 		}
-		return "redirect:/article/list";
+		return "redirect:/articles/list";
 	}
 
 }

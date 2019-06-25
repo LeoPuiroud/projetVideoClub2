@@ -8,17 +8,17 @@ import javax.persistence.Entity;
 @DiscriminatorValue("bluray")
 public class BluRay extends Article {
 	@Column(name = "trois_d")
-	private Boolean troisD;
+	private boolean troisD;
 
 	public BluRay() {
 
 	}
 
-	public Boolean getTroisD() {
+	public boolean getTroisD() {
 		return troisD;
 	}
 
-	public void setTroisD(Boolean troisD) {
+	public void setTroisD(boolean troisD) {
 		this.troisD = troisD;
 	}
 
