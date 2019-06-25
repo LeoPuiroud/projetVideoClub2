@@ -13,11 +13,12 @@
 	crossorigin="anonymous">
 </head>
 <body>
-	<div class="container"><div>
-		<h1>Editer un adherent</h1>
-	</div>
-		
-		<form:form method="get" action="save" modelAttribute="adherent">
+	<div class="container">
+		<div>
+			<h1>Editer un adherent</h1>
+		</div>
+
+		<form:form method="get" action="save" modelAttribute="adherents">
 			<form:hidden path="version" />
 			<div class="form-group">
 				<form:label path="numero">Numero d'adherent:</form:label>
@@ -56,10 +57,10 @@
 				<form:label path="adresse.ville">Ville:</form:label>
 				<form:input path="adresse.ville" cssClass="form-control" />
 			</div>
-						<div class="form-group">
-				<form:label path="enrolement">Date de naissance::</form:label>
-				<form:input type="date" path="enrolement" cssClass="form-control" />
-				<form:errors path="enrolement"></form:errors>
+			<div class="form-group">
+				<form:label path="dtNaiss">Date de naissance::</form:label>
+				<form:input type="date" path="dtNaiss" cssClass="form-control" />
+				<form:errors path="dtNaiss"></form:errors>
 			</div>
 			<div class="form-group">
 				<button type="submit" class="btn btn-success">Enregistrer</button>

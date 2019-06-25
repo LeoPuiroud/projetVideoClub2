@@ -32,7 +32,7 @@
 				<th></th>
 				<th></th>
 			</tr>
-			<c:forEach var="a" items="${listeSoldat}">
+			<c:forEach var="a" items="${adherents}">
 				<tr>
 					<td>${a.numero}</td>
 					<td>${a.civilite}</td>
@@ -41,10 +41,13 @@
 					<td>${a.adresse.numero}&nbsp;${a.adresse.rue}</td>
 					<td>${a.adresse.codePostal}</td>
 					<td>${a.adresse.ville}</td>
-					<td>${a.articlesEmpruntes}</td>
+					<td></td>
+<%-- 					<td><c:forEach var="ae" items="${articlesEmpruntes}"> --%>
+<%-- 					<td>${ae.titre}</td> --%>
+<%-- 					</c:forEach></td> --%>
 					<td><fmt:formatDate value="${a.dtNaiss}" pattern="dd/MM/yyyy" /></td>
-					<td><a class="btn btn-info" href="edit?id=${a.id}">Editer</a></td>
-					<td><a class="btn btn-danger" href="delete?id=${a.id}">Supprimer</a></td>
+					<td><a class="btn btn-info" href="edit?numero=${a.numero}">Editer</a></td>
+					<td><a class="btn btn-danger" href="delete?numero=${a.numero}">Supprimer</a></td>
 				</tr>
 			</c:forEach>
 		</table>
