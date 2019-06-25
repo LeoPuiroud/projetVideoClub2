@@ -23,6 +23,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Version;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @Entity
 @Table(name = "adherent")
 @NamedQueries({ @NamedQuery(name = "Adherent.findAll", query = "select a from Adherent a"),
@@ -53,6 +55,7 @@ public class Adherent {
 	@Version
 	private int version;
 	@Temporal(TemporalType.DATE)
+	@DateTimeFormat(pattern = "yyyy/MM/dd")
 	private Date dtNaiss;
 
 	public Adherent() {
