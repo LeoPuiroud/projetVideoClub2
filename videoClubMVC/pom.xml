@@ -31,7 +31,7 @@
 			<version>${spring-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>formation.sopra.3bu</groupId>
+			<groupId>sopra</groupId>
 			<artifactId>videoClubJpaSpring</artifactId>
 			<version>1.0-SNAPSHOT</version>
 		</dependency>
