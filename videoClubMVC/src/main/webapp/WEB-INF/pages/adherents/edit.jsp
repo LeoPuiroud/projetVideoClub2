@@ -19,11 +19,12 @@
 		</div>
 
 		<form:form method="get" action="save" modelAttribute="adherents">
+			<form:errors></form:errors>
 			<form:hidden path="version" />
 			<div class="form-group">
 				<form:label path="numero">Numero d'adherent:</form:label>
-				<form:input path="numero" readonly="true" cssClass="form-control"
-					placeholder="generer automatiquement" />
+				<form:input path="numero" type="number" readonly="true"
+					cssClass="form-control" placeholder="generer automatiquement" />
 			</div>
 			<div class="form-group">
 				<form:label path="prenom">Prenom:</form:label>
