@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\java\videoClub\model\Adresse.java
 C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\java\videoClub\model\Titre.java
 C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\java\videoClub\repository\FilmRealisateurRepository.java
@@ -13,3 +14,20 @@ C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\ja
 C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\java\videoClub\model\BluRay.java
 C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\java\videoClub\repository\RealisateurRepository.java
 C:\Users\ajc\Desktop\CoursServlet\projetVideoClub\videoClubJpaSpring\src\main\java\videoClub\model\FilmRealisateur.java
+=======
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Film.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\FilmRealisateur.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\repository\RealisateurRepository.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Article.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\repository\FilmRepository.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Adresse.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\BluRay.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Dvd.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\repository\AdherentRepository.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\FilmRealisateurPK.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Titre.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\repository\ArticleRepository.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Adherent.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\repository\FilmRealisateurRepository.java
+C:\Users\ajc\Desktop\ProjetVideoMVC\projetVideoClub2\videoClubJpaSpring\src\main\java\videoClub\model\Realisateur.java
+>>>>>>> master
