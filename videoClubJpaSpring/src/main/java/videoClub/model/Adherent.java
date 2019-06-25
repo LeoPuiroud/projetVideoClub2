@@ -27,7 +27,7 @@ import javax.persistence.Version;
 @Table(name = "adherent")
 @NamedQueries({ @NamedQuery(name = "Adherent.findAll", query = "select a from Adherent a"),
 		@NamedQuery(name = "Adherent.findByVille", query = "select a from Adherent a where lower(a.adresse.ville) like :ville"),
-		@NamedQuery(name = "Adherent.findAllWithArticles", query = "select distinct a from Adherent a left join fetch a.articlesEmpruntes "),
+		@NamedQuery(name = "Adherent.findAllWithArticles", query = "select distinct a from Adherent a left join fetch a.articlesEmpruntes ae left join fetch ae.film"),
 		@NamedQuery(name = "Adherent.findByKeyWithArticles", query = "select distinct a from Adherent a left join fetch a.articlesEmpruntes ae left join fetch ae.film where a.numero=:numero") })
 public class Adherent {
 	@Id

@@ -14,7 +14,7 @@ import videoClub.model.Adherent;
 import videoClub.repository.AdherentRepository;
 
 @Controller
-@RequestMapping("/adherent")
+@RequestMapping("/adherents")
 public class AdherentController {
 	
 	@Autowired
@@ -22,8 +22,10 @@ public class AdherentController {
 
 	
 	@GetMapping("/list")
-	public ModelAndView list() {
-		return new ModelAndView("adherent/list", "adherent", adherentRepository.findAll());
+	public ModelAndView list() { 
+		ModelAndView mav = new ModelAndView("adherents/list", "adherents", adherentRepository.findAll());
+		//mav.addObject("articlesEmpruntes", adherentRepository.findAllWithArticles());
+		return mav;
 	}
 	
 	@GetMapping("/add")
@@ -32,32 +34,32 @@ public class AdherentController {
 	}
 	
 	private ModelAndView goEdit(Adherent adherent) {
-		return new ModelAndView("adherent/edit", "adherent", adherent);
+		return new ModelAndView("adherents/edit", "adherents", adherent);
 	}
 	
 	@GetMapping("/save")
 	private ModelAndView save(Adherent adherent) {
 		adherentRepository.save(adherent);
-		return new ModelAndView("redirect:/adherent/list");
+		return new ModelAndView("redirect:/adherents/list");
 	}
 
 	
 	@GetMapping("/edit")
-	public ModelAndView edit(@RequestParam(name = "id") Integer id) {
+	public ModelAndView edit(@RequestParam(name = "numero") Integer id) {
 		Optional<Adherent> opt = adherentRepository.findById(id);
 		if (opt.isPresent()) {
 			return goEdit(opt.get());
 		} else {
-			return new ModelAndView("redirect:/adherent/list");
+			return new ModelAndView("redirect:/adherents/list");
 		}
 	}
 	
 	@GetMapping("/delete")
-	public String delete(@RequestParam(name = "id") int id) {
+	public String delete(@RequestParam(name = "numero") int id) {
 		Optional<Adherent> opt = adherentRepository.findById(id);
 		if (opt.isPresent()) {
 			adherentRepository.deleteById(id);
 		}
-		return "redirect:/adherent/list";
+		return "redirect:/adherents/list";
 	}
 }
