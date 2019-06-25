@@ -8,9 +8,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
@@ -20,6 +19,9 @@ import javax.persistence.Version;
 
 @Entity
 @Table(name = "film")
+@NamedQueries({
+@NamedQuery(name = "Film.findAllWithRealisateurs", query = "select distinct f from Film f left join fetch f.realisateurs r left join fetch r.key k left join fetch k.realisateur")})
+
 public class Film {
 	@Id
 	@SequenceGenerator(name = "seqFilm", sequenceName = "seq_film", initialValue = 100, allocationSize = 1)

@@ -2,23 +2,28 @@ package controller;
 
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import videoClub.model.Adherent;
 import videoClub.model.Film;
 import videoClub.repository.FilmRepository;
 
+@Controller
+@RequestMapping("/film")
 public class FilmController {
 
-	
+	@Autowired
 	FilmRepository filmRepository;
 	
 	@GetMapping("/list")
 	public ModelAndView list() {
-		return new ModelAndView("film/list", "film", filmRepository.findAll());
+		
+		
+		return new ModelAndView("film/list", "films", filmRepository.findAllWithRealisateurs());
 	}
 	
 	@GetMapping("/add")
@@ -27,7 +32,7 @@ public class FilmController {
 	}
 	
 	private ModelAndView goEdit(Film film) {
-		return new ModelAndView("film/edit", "film", film);
+		return new ModelAndView("film/edit", "films", film);
 	}
 	
 	@GetMapping("/save")

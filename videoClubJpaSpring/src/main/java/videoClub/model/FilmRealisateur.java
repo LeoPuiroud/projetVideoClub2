@@ -1,3 +1,4 @@
+
 package videoClub.model;
 
 import javax.persistence.EmbeddedId;
