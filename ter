@@ -1,0 +1,49 @@
+[33mcommit 852e4f322cbd63aac4fc8441d95bcbb537834569[m[33m ([m[1;36mHEAD -> [m[1;32mrodrigue[m[33m, [m[1;31morigin/rodrigue[m[33m)[m
+Author: Rodrigue <sy.rodrigue@gmail.com>
+Date:   Tue Jun 25 11:32:28 2019 +0200
+
+    adherent edit et list
+
+[33mcommit 2719dc5fc6cb48e679b0dacb1b30bcdb4c1380b0[m
+Merge: 9e8aaba 21cc19e
+Author: Rodrigue <sy.rodrigue@gmail.com>
+Date:   Tue Jun 25 10:55:33 2019 +0200
+
+    Merge branch 'master' of https://github.com/LeoPuiroud/projetVideoClub2 into rodrigue
+
+[33mcommit 21cc19e9d86c943a92f80fb0478a7483881e9f95[m
+Author: LeoPuiroud <leo.puiroud@gmail.com>
+Date:   Tue Jun 25 10:55:19 2019 +0200
+
+    ajout des controllers et des pages web
+
+[33mcommit 9e8aabaaaadc31c9925614453fd50edefc065f79[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 6e46199 631e442
+Author: Rodrigue <sy.rodrigue@gmail.com>
+Date:   Tue Jun 25 10:40:00 2019 +0200
+
+    Merge branch 'master' of https://github.com/LeoPuiroud/projetVideoClub2
+
+[33mcommit 6e46199365f686404a1374b4a932eebd57fbc8a7[m
+Author: Rodrigue <sy.rodrigue@gmail.com>
+Date:   Tue Jun 25 10:39:54 2019 +0200
+
+    c'est la merde
+
+[33mcommit 631e442ccfb88df569ad905e2540e1a8d205a537[m
+Author: LeoPuiroud <leo.puiroud@gmail.com>
+Date:   Tue Jun 25 10:38:05 2019 +0200
+
+    mise a niveau du projet
+
+[33mcommit 867fcedd7e778840a04bbcbcd1ae23f158cf4f3e[m
+Author: LeoPuiroud <leo.puiroud@gmail.com>
+Date:   Tue Jun 25 10:22:07 2019 +0200
+
+    modification du pom pour la dependency
+
+[33mcommit c7e86d81bfd7f56036ebe84e08c45be24279bedd[m
+Author: LeoPuiroud <leo.puiroud@gmail.com>
+Date:   Tue Jun 25 10:15:07 2019 +0200
+
+    first commit
