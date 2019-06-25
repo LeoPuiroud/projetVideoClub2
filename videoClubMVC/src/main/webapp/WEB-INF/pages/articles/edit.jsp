@@ -19,7 +19,7 @@
 				<c:url value="saveDvd" var="action"></c:url>
 			</c:when>
 			<c:when test="${article.getClass().simpleName == 'BluRay'}">
-				<c:url value="saveBluRay" var="action"></c:url>
+				<c:url value="saveBlueray" var="action"></c:url>
 			</c:when>
 		</c:choose>
 		<form:form method="get" action="${action}" modelAttribute="article">
