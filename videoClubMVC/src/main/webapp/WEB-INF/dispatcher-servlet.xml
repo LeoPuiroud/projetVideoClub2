@@ -25,7 +25,7 @@
 		class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
 		<property name="converters">
 			<list>
-				<bean class="formationSpringMvc.converter.ArmeConverter"></bean>
+				<bean class="converter.ArticleConverter"></bean>
 			</list>
 		</property>
 	</bean>
